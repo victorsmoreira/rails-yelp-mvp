@@ -11,3 +11,15 @@
 // Your CSS partials
 @import "components/index";
 @import "pages/index";
+
+* {
+  text-decoration: none !important;
+}
+
+.header {
+  background-color: rgb(234, 234, 234);
+  border: 1px lightgray solid;
+  h2, a {
+    color: gray;
+  }
+}

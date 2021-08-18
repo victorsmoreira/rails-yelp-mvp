@@ -1,11 +1,12 @@
 <h1><%= @restaurant.name %></h1>
 
 <p><%= link_to 'Back', restaurants_path %></p>
-<p><%= link_to 'Write a review', new_restaurant_review_path(@restaurant) %></p>
 
-<h3>Reviews</h3>
-<% @restaurant.reviews.each do |review| %>
-<p><%= "#{review.rating} stars | #{review.content}" %></p>
-<% end %>
-
-<%# render 'reviews/form' %>
+<div class="p-3 border-top border-bottom">
+  <h5 class='p-3'>Reviews</h5>
+  <% @restaurant.reviews.each do |review| %>
+  <p><%= "#{review.rating} stars | #{review.content}" %></p>
+  <% end %>
+</div>
+<h5 class='p-3 border-bottom'>Write your review</h5>
+<%= render 'reviews/form' %>

@@ -14,6 +14,12 @@
   </head>
 
   <body>
-    <%= yield %>
+    <div class="container">
+      <div class="d-flex justify-content-between">
+        <h2 class='p-3'><%= link_to 'Yelp MVP', restaurants_path %></h2>
+        <%= link_to 'New restaurant', new_restaurant_path, class: 'p-3' %>
+      </div>
+      <%= yield %>
+    </div>
   </body>
 </html>
